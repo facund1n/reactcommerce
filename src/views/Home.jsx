@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+
+import Header from "../components/Header";
+import Landing from "../components/Landing";
+import Footer from "../components/Footer";
 
 const Home = () => {
-  return (
-    <div>home</div>
-  )
-}
+  // zona Javascrip
 
-export default Home
+  return (
+    // zona JSX
+    <>
+      <Header />
+      <Landing />
+      <Footer />
+    </>
+  );
+};
+
+export default Home;
