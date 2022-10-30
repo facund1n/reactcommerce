@@ -13,7 +13,7 @@ const Header = () => {
               width="30"
               height="30"
               className="d-inline-block align-top"
-            />
+            />{" "}
             E - Commerce The Comeback
           </Navbar.Brand>
         </Container>
