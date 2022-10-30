@@ -10,7 +10,7 @@ export const ProductGroup = () => {
       <Container fluid>
         <CardGroup>
           {mock.map((product) => (
-            <Product product={product} />
+            <Product product={product} /> // mapea el 'mock' y obtiene un product (prop) con los valores que obtivo del map del mock
           ))}
         </CardGroup>
       </Container>
