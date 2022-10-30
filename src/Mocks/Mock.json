@@ -1,0 +1,18 @@
+
+[
+    {
+      "name": "producto 1",
+      "price": "100",
+      "description": "Este es el producto 1"
+    },
+    {
+      "name": "producto 2",
+      "price": "200",
+      "description": "Este es el producto 2"
+    },
+    {
+      "name": "producto 3",
+      "price": "300",
+      "description": "Este es el producto 3"
+    }
+  ]
