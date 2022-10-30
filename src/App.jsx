@@ -1,12 +1,10 @@
+import Main from "./views/Main";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
-  return (
-    <>
-      <h1>Hola</h1>
-    </>
-  );
+  return <Main />;
 }
 
 export default App;
 
 // comment
-
