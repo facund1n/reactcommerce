@@ -1,27 +1,17 @@
-import React from "react";
-import { useState, useEffect } from "react";
 import { CardGroup, Container } from "react-bootstrap";
 import Product from "./Product"; // Componente
 
-export const ProductGroup = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=3")
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  }, []);
-
+export const ProductGroup = ({ data }) => {
+  console.log(data, "data?");
   return (
-    <>
-      <Container>
-        <CardGroup>
-          {data.map((product) => (
-            <Product product={product} />
-          ))}
-        </CardGroup>
-      </Container>
-    </>
+    // Container que tiene cada card armada y consume su api
+    <Container>
+      <CardGroup>
+        {data.map((product) => (
+          <Product product={product} />
+        ))}
+      </CardGroup>
+    </Container>
   );
 };
 
