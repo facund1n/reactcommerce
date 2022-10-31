@@ -5,7 +5,7 @@ const ObtainData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=3")
+    fetch("https://fakestoreapi.com/products?limit=5")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);

@@ -1,11 +1,11 @@
-import ProductGroup from "./ProductGroup";
+import ObtainData from "./ObtainData";
 import Welcome from "./Wecome";
 
 const Landing = () => {
   return (
     <>
       <Welcome />
-      <ProductGroup />
+      <ObtainData />
     </>
   );
 };
