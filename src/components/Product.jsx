@@ -1,9 +1,9 @@
-import { Button, Card, Container, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const Product = ({ product }) => {
   return (
     <>
-      <Card style={{ height: "99%" }} className="mt-1">
+      <Card className="my-1" style={{ height: "95%" }}>
         <Card.Body style={{ height: "50%" }}>
           <Card.Img
             variant="top"
@@ -18,9 +18,9 @@ const Product = ({ product }) => {
           <div>
             <div>${product.price}</div>
           </div>
-          <div>
+          {/* <div>
             <Button variant="success">Comprar</Button>
-          </div>
+          </div> */}
           {/* <Card.Text>{product.description}</Card.Text> */}
         </Card.Footer>
       </Card>

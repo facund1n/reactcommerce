@@ -7,10 +7,10 @@ import ProductGrouping from "./ProductGrouping";
 
 const ObtainData = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); //loader
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=12")
+    fetch("https://fakestoreapi.com/products/category/electronics")
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));
