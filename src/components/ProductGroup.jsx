@@ -1,16 +1,23 @@
 import React from "react";
-import Product from "./Product"; // Componente
-import mock from "../Mocks/Mock.json"; //mock
-
+import { useState, useEffect } from "react";
 import { CardGroup, Container } from "react-bootstrap";
+import Product from "./Product"; // Componente
 
 export const ProductGroup = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products?limit=3")
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  }, []);
+
   return (
     <>
-      <Container fluid>
+      <Container>
         <CardGroup>
-          {mock.map((product) => (
-            <Product product={product} /> // mapea el 'mock' y obtiene un product (prop) con los valores que obtivo del map del mock
+          {data.map((product) => (
+            <Product product={product} />
           ))}
         </CardGroup>
       </Container>
