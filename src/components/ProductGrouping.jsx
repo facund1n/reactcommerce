@@ -8,9 +8,9 @@ const ProductGroup = ({ data }) => {
     <Container>
       <CardGroup>
         <Row xs={2} md={4}>
-          {data.map((product, key) => (
+          {data.map((product) => (
             <Col sm={4}>
-              <Product product={product} key={key} />
+              <Product product={product} />
             </Col>
           ))}
         </Row>

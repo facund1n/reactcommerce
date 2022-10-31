@@ -5,7 +5,7 @@ import ProductGrouping from "./ProductGrouping";
 
 // consumimos API a atrvés de ObatainData y le pasamos a ProductGrouping por medio de props
 
-const ObtainData = () => {
+const ProductData = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true); //loader
 
@@ -19,4 +19,4 @@ const ObtainData = () => {
   return <>{isLoading ? <Loader /> : <ProductGrouping data={data} />}</>;
 };
 
-export default ObtainData;
+export default ProductData;
