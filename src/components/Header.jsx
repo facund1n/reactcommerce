@@ -16,7 +16,10 @@ const Header = () => {
             />{" "}
             The Comeback
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <div className="d-flex">
+            <Cart /> {/* CARRITO */}
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          </div>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
@@ -36,7 +39,6 @@ const Header = () => {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-          <Cart />
         </Container>
       </Navbar>
     </>

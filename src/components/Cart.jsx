@@ -11,17 +11,24 @@ import {
 function OffcanvasExample() {
   return (
     <>
-      {[false].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand}>
+      {[false].map((expand, k) => (
+        <Navbar key={expand} bg="light" expand={expand} k={k}>
           <Container>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle
+              aria-controls={`offcanvasNavbar-expand-${expand}`}
+              k={k}
+            />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              k={k}
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}
+                  k={k}
+                >
                   CART
                 </Offcanvas.Title>
               </Offcanvas.Header>
