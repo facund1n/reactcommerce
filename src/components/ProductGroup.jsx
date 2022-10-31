@@ -1,9 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
-import Product from "./Product"; // Componente
-
 import { CardGroup, Container } from "react-bootstrap";
+import Product from "./Product"; // Componente
 
 export const ProductGroup = () => {
   const [data, setData] = useState([]);
@@ -19,7 +17,7 @@ export const ProductGroup = () => {
       <Container>
         <CardGroup>
           {data.map((product) => (
-            <Product product={product} /> // mapea el 'mock' y obtiene un product (prop) con los valores que obtivo del map del mock
+            <Product product={product} />
           ))}
         </CardGroup>
       </Container>
