@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import ProductGroup from "../components/ProductGroup";
+import ProductGroup from "./ProductGroup";
 
-export const ObtainData = () => {
+const ObtainData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -10,11 +10,7 @@ export const ObtainData = () => {
       .then((json) => setData(json));
   }, []);
 
-  return (
-    <>
-      <ProductGroup data={data} />
-    </>
-  );
+  return <ProductGroup data={data} />;
 };
 
 export default ObtainData;

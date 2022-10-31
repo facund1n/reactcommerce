@@ -1,15 +1,15 @@
 import { CardGroup, Container } from "react-bootstrap";
 import Product from "./Product"; // Componente
 
-export const ProductGroup = ({ data }) => {
-  console.log(data, "data?");
+const ProductGroup = ({ data }) => {
+  // Container que tiene cada card armada y consume su api
   return (
-    // Container que tiene cada card armada y consume su api
     <Container>
       <CardGroup>
         {data.map((product) => (
           <Product product={product} />
         ))}
+        <Product />
       </CardGroup>
     </Container>
   );
