@@ -1,4 +1,3 @@
-import React from "react";
 import ProductGroup from "./ProductGroup";
 import Welcome from "./Wecome";
 
