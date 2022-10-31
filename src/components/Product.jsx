@@ -1,17 +1,27 @@
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Container, Col } from "react-bootstrap";
 
 const Product = ({ product }) => {
   return (
     <>
-      <Card className="m-2">
-        <Card.Img variant="top" src={product.image} />
-        <Card.Body>
-          <Card.Title>{product.title}</Card.Title>
-          <Card.Text>${product.price}</Card.Text>
-          <Card.Text>{product.description}</Card.Text>
+      <Card style={{ height: "99%" }} className="mt-1">
+        <Card.Body style={{ height: "50%" }}>
+          <Card.Img
+            variant="top"
+            style={{ height: "100%", width: "100%" }}
+            src={product.image}
+          />
         </Card.Body>
-        <Card.Footer>
-          <Button variant="success">Comprar</Button>
+        <Card.Footer style={{ height: "50%" }}>
+          <div>
+            <div>{product.title}</div>
+          </div>
+          <div>
+            <div>${product.price}</div>
+          </div>
+          <div>
+            <Button variant="success">Comprar</Button>
+          </div>
+          {/* <Card.Text>{product.description}</Card.Text> */}
         </Card.Footer>
       </Card>
     </>

@@ -10,7 +10,7 @@ const ObtainData = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=3")
+    fetch("https://fakestoreapi.com/products?limit=12")
       .then((res) => res.json())
       .then((json) => setData(json))
       .finally(() => setIsLoading(false));
