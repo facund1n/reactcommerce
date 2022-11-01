@@ -1,11 +1,11 @@
-import ProductListing from "./ProductListing";
+import ProductsMap from "./ProductsMap";
 import Welcome from "./Wecome";
 
 const Landing = () => {
   return (
     <>
       <Welcome />
-      <ProductListing />
+      <ProductsMap />
     </>
   );
 };
