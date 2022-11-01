@@ -1,27 +1,27 @@
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
-import Cart from "./Cart";
+import { Link } from "react-router-dom";
+import CartButton from "./CartButton";
 
 const Header = () => {
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
-            <img
-              alt="logo"
-              src="/img/logo.jpg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top m-auto"
-            />{" "}
-            The Comeback
+          <Navbar.Brand>
+            <Link to="/">
+              <img
+                alt="logo"
+                src="/img/logo.jpg"
+                width="30"
+                height="30"
+                className="d-inline-block align-top m-auto"
+              />{" "}
+              The Comeback
+            </Link>
           </Navbar.Brand>
-          <div className="d-flex">
-            <Cart /> {/* CARRITO */}
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          </div>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -39,6 +39,7 @@ const Header = () => {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
+          <CartButton />
         </Container>
       </Navbar>
     </>
